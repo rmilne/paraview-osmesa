@@ -33,7 +33,7 @@ RUN apt-get update && apt-get -y install \
         --with-dri-drivers= \
         --with-egl-platforms= \
         --with-gallium-drivers=swrast \
- && make -j8 \
+ && make \
  && make install \
  && ldconfig \
  && cd / \
@@ -55,7 +55,7 @@ RUN apt-get update && apt-get -y install \
         -DVTK_OPENGL_HAS_OSMESA=ON \
         -DVTK_USE_OFFSCREEN=ON \
         /ParaView-v5.2.0 \
- && make -j8 \
+ && make \
  && make install \
  && ldconfig \
  && cd / \
