@@ -71,3 +71,5 @@ RUN apt-get update && apt-get -y install \
         python2.7-dev \
         python-mako \
  && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt install -y libpython2.7 \
+ && rm -rf /var/lib/apt/lists/*
