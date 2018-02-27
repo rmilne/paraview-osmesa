@@ -37,7 +37,7 @@ RUN apt-get update && apt-get -y install \
  && make install \
  && ldconfig \
  && cd / \
- && curl -L "http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.4.1&type=source&os=all&downloadFile=ParaView-v5.4.1.tar.gz" | tar xz \
+ && curl -L "http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.4&type=source&os=all&downloadFile=ParaView-v5.4.1.tar.gz" | tar xz \
  && mkdir build \
  && cd build \
  && cmake \
