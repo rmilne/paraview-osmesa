@@ -37,7 +37,7 @@ RUN apt-get update && apt-get -y install \
  && make install \
  && ldconfig \
  && cd / \
- && curl -L "http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.2&type=source&os=all&downloadFile=ParaView-v5.2.0.tar.gz" | tar xz \
+ && curl -L "http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.4.1&type=source&os=all&downloadFile=ParaView-v5.4.1.tar.gz" | tar xz \
  && mkdir build \
  && cd build \
  && cmake \
@@ -54,12 +54,12 @@ RUN apt-get update && apt-get -y install \
         -DPYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython2.7.so \
         -DVTK_OPENGL_HAS_OSMESA=ON \
         -DVTK_USE_OFFSCREEN=ON \
-        /ParaView-v5.2.0 \
+        /ParaView-v5.4.1 \
  && make \
  && make install \
  && ldconfig \
  && cd / \
- && rm -r /mesa-13.0.5 /ParaView-v5.2.0 /build \
+ && rm -r /mesa-13.0.5 /ParaView-v5.4.1 /build \
  && apt-get purge -y --auto-remove --purge \
         autoconf \
         bison \
